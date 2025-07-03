@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz dia dos namorados<3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+  <style>
+    body {
+      text-align: center;
+      margin: 0;
+      color: #ffffff;
+      background: #111;
+    }
+
+    #pag {
+        font-family: "Kavoon", serif;
+        text-align: center;
+    }
+    .neon {
+        border: none;
+        height: 4px;
+        background: #ffffff;
+        box-shadow:
+        0 0 10px #ffffff,
+        0 0 20px #ffffff,
+        0 0 30px #ffffff,
+        0 0 40px #fffeff;
+        margin: 30px auto;
+        width: 80%;
+        border-radius: 2px;
+    }
+    .estrela {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 0 5px white, 0 0 10px white;
+      animation: brilho 1.5s ease-out forwards;
+    }
+            h1 {
+                font-size: 70px;
+            }
+            h2 {
+                font-size: 40px;
+            }
+            h3 {
+                font-size: 28px;
+            }
+            p {
+                font-size: 20px;
+            }
+            .botao {
+                display: inline-block;
+                margin: 50px;
+                padding: 30px 40px;
+                font-size: 50px;
+                color: white;
+                font-style: italic;
+                background-color: transparent;
+                border: 2px solid white;
+                border-radius: 10px;
+                text-decoration: none;
+                font-family: "Kavoon", serif;
+                box-shadow:
+                    0 0 5px #ffffff,
+                    0 0 10px #ffffff,
+                    0 0 20px #ffffff,
+                    0 0 40px #ffffff;
+                transition: transform 0.2s;
+            }
+
+.botao:hover {
+  transform: scale(1.05);
+}
+
+    @keyframes brilho {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.5);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0);
+      }
+    }
+  </style>
+</head>
+<body>
+    <div id="pag">
+        <article>
+            <h1>Meu amor...</h1>
+            <h2>
+                Você me disse que gostaria de usar um papel de parede,
+                e que eu fosse o tema do mesmo hehehe
+                mas ele teria que ter muitos frús frús
+            </h2>
+            <h3>pensando nisso, te fiz esse presente <3</h3>
+            <hr class="neon"/>
+            <h2>Feliz dia dos namorados<br/>Meu Docinho!</h2>
+            <hr class="neon"/>
+            <p>OBS : Para salvar as imagens, clique nos 3 pontinhos
+               no canto superior direito da tela.
+            </p>
+        </article>
+        <div id="botoes">
+            <a href="https://photos.app.goo.gl/eYAqw5S9nifFBd5f9" class="botao">CORAÇÕES ROSA + <i>TEXTO</i></a><br/>
+            <a href="https://photos.app.goo.gl/JWfLFc6rjmgTQ9kH7" class="botao">CORAÇÕES VERDE + <i>TEXTO</i></a><br/>
+            <a href="https://photos.app.goo.gl/1rKacgVMp2RKCeGGA" class="botao">CORAÇÕES AZUIS + <i>TEXTO</i></a><br/>
+            <a href="https://photos.app.goo.gl/W8qrDjhHCpsX85ui9" class="botao">CORAÇÕES ROSA</a><br/>
+            <a href="https://photos.app.goo.gl/So5ATDRJ2imVkGtZ9" class="botao">CORAÇÕES VERDE</a><br/>
+            <a href="https://photos.app.goo.gl/AYjtYK3W42GxaEj3A" class="botao">CORAÇÕES AZUIS</a><br/>
+            <a href="https://photos.app.goo.gl/BkqpqN8eKbXEZbeG9" class="botao">MONTAGEM GRANDE</a><br/>
+            <a href="https://photos.app.goo.gl/VcHtaEPqEmAKz6uW9" class="botao">MONTAGEM PEQUENA 1</a><br/>
+            <a href="https://photos.app.goo.gl/PuLWbdYEdgs4oixA7" class="botao">MONTAGEM PEQUENA 2</a><br/>
+        </div>
+
+    </div>
+            <script>
+            function criarEstrela() {
+                const estrela = document.createElement('div');
+                estrela.classList.add('estrela');
+                estrela.style.left = Math.random() * window.innerWidth + 'px';
+                estrela.style.top = Math.random() * document.body.scrollHeight + 'px';
+                document.body.appendChild(estrela);
+                setTimeout(() => {
+                estrela.remove();
+                }, 1500);
+            }
+
+            setInterval(criarEstrela, 100);
+            </script>
+
+        </body>
+</html>
